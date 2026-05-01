@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>援助國家中的國家 — 波士尼亞與赫塞哥維納的對外援助結構</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #fafafa;
+    --ink: #0a0a0a;
+    --ink-2: #1a1a1a;
+    --muted: #6e6e73;
+    --muted-2: #8e8e93;
+    --line: #e5e5e7;
+    --line-soft: #f0f0f2;
+    --line-mid: #c7c7cc;
+    --blue: #2e4a73;
+    --blue-soft: #edeff4;
+    --blue-deep: #1a2d4d;
+    --sans: 'Manrope', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+    --tc: 'Noto Sans TC', 'Manrope', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection { background: var(--blue); color: #fff; }
+
+  .progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2px;
+    background: var(--blue);
+    z-index: 100;
+    width: 0%;
+    transition: width 0.1s ease;
+  }
+
+  .toc {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 32px;
+    z-index: 50;
+    width: 110px;
+  }
+  .toc ol { list-style: none; padding: 0; }
+  .toc li { margin-bottom: 12px; }
+  .toc a {
+    display: block;
+    font-family: var(--tc);
+    font-size: 11.5px;
+    color: var(--muted-2);
+    text-decoration: none;
+    padding: 4px 0 4px 14px;
+    border-left: 2px solid var(--line);
+    line-height: 1.4;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  .toc a:hover { color: var(--ink); border-left-color: var(--ink); }
+  .toc a.active {
+    color: var(--blue);
+    border-left-color: var(--blue);
+    font-weight: 500;
+  }
+  .toc .num {
+    font-family: var(--sans);
+    font-size: 10px;
+    color: var(--muted-2);
+    display: block;
+    margin-bottom: 1px;
+    letter-spacing: 0.05em;
+  }
+  .toc a.active .num { color: var(--blue); }
+
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .hero { padding: 120px 0 80px; }
+  .hero h1 {
+    font-family: var(--tc);
+    font-weight: 700;
+    font-size: clamp(40px, 5.6vw, 60px);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 28px;
+  }
+  .hero .subhead {
+    font-family: var(--tc);
+    font-weight: 300;
+    font-size: clamp(18px, 1.9vw, 22px);
+    line-height: 1.5;
+    color: var(--ink-2);
+    max-width: 700px;
+    margin-bottom: 40px;
+    letter-spacing: -0.005em;
+  }
+  .byline {
+    font-family: var(--tc);
+    font-size: 13.5px;
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 20px;
+    margin-bottom: 48px;
+  }
+  .byline strong { color: var(--ink); font-weight: 500; }
+  .lede {
+    font-family: var(--tc);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.85;
+    color: var(--ink-2);
+  }
+
+  .kpi {
+    margin: 64px 0;
+    padding: 48px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px 32px;
+  }
+  .kpi-cell .num {
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    margin-bottom: 6px;
+    font-variant-numeric: tabular-nums;
+  }
+  .kpi-cell .num .accent { color: var(--blue); }
+  .kpi-cell .num .unit { color: var(--muted); font-weight: 400; font-size: 0.55em; margin-left: 2px; }
+  .kpi-cell .lbl {
+    font-family: var(--tc);
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  section { padding: 72px 0; }
+  section + section { border-top: 1px solid var(--line); }
+  section.refs { border-top: 1px solid var(--line); padding-top: 72px; padding-bottom: 120px; }
+
+  h2 {
+    font-family: var(--tc);
+    font-weight: 700;
+    font-size: clamp(26px, 3.2vw, 36px);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 32px;
+    max-width: 760px;
+  }
+  h2 .num {
+    font-family: var(--sans);
+    font-size: 0.45em;
+    font-weight: 500;
+    color: var(--muted-2);
+    margin-right: 14px;
+    letter-spacing: 0.02em;
+    vertical-align: 0.2em;
+  }
+
+  p {
+    font-family: var(--tc);
+    font-size: 16.5px;
+    line-height: 1.85;
+    color: var(--ink-2);
+    margin-bottom: 22px;
+    max-width: 760px;
+    text-align: justify;
+    text-justify: inter-ideograph;
+  }
+  p strong { color: var(--ink); font-weight: 600; }
+
+  h3 {
+    font-family: var(--tc);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--ink);
+    margin: 44px 0 14px;
+    letter-spacing: -0.01em;
+  }
+
+  a { color: var(--blue); text-decoration: none; border-bottom: 1px solid var(--blue-soft); transition: border-color 0.2s; }
+  a:hover { border-bottom-color: var(--blue); }
+
+  .table-block { margin: 36px 0; }
+  .table-title {
+    font-family: var(--tc);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--ink);
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--sans);
+    font-size: 14px;
+  }
+  table thead th {
+    border-top: 1.5px solid var(--ink);
+    border-bottom: 1px solid var(--line-mid);
+    padding: 11px 12px 11px 0;
+    text-align: left;
+    font-weight: 500;
+    color: var(--muted);
+    font-size: 12px;
+  }
+  table thead th.num { text-align: right; padding-right: 0; padding-left: 12px; }
+  table tbody td {
+    border-bottom: 1px solid var(--line);
+    padding: 12px 12px 12px 0;
+    line-height: 1.5;
+    color: var(--ink-2);
+    vertical-align: top;
+    font-family: var(--tc);
+    font-size: 14px;
+  }
+  table tbody td.num {
+    text-align: right;
+    padding-right: 0;
+    padding-left: 12px;
+    font-family: var(--sans);
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  table tbody td.first { color: var(--ink); font-weight: 500; }
+  table tbody tr:last-child td { border-bottom: 1.5px solid var(--ink); }
+  table tbody tr.emph td.first,
+  table tbody tr.emph td.num { color: var(--blue-deep); font-weight: 600; }
+  .table-source {
+    margin-top: 12px;
+    font-family: var(--tc);
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .chart-block { margin: 44px 0; }
+  .chart-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .chart-title {
+    font-family: var(--tc);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .toggle {
+    display: inline-flex;
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 2px;
+  }
+  .toggle button {
+    background: transparent;
+    border: none;
+    padding: 4px 12px;
+    font-family: var(--sans);
+    font-size: 11.5px;
+    font-weight: 500;
+    color: var(--muted);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: color 0.15s ease, background 0.15s ease;
+  }
+  .toggle button:hover { color: var(--ink); }
+  .toggle button.active { background: var(--ink); color: #fff; }
+
+  .chart-wrap { position: relative; }
+  .chart-block svg { display: block; width: 100%; height: auto; }
+  .chart-source {
+    margin-top: 14px;
+    font-family: var(--tc);
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  .tooltip {
+    position: absolute;
+    background: var(--ink);
+    color: #fff;
+    padding: 8px 12px;
+    font-family: var(--sans);
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.12s ease;
+    white-space: nowrap;
+    z-index: 10;
+  }
+  .tooltip.visible { opacity: 1; }
+  .tooltip .yr {
+    font-weight: 600;
+    color: #93b3df;
+    margin-right: 8px;
+  }
+
+  .chart-dot { cursor: pointer; }
+
+  .donor-block { margin: 28px 0; }
+  .donor-row {
+    display: grid;
+    grid-template-columns: 220px 1fr 60px;
+    align-items: center;
+    gap: 24px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .donor-row:first-child { border-top: 1.5px solid var(--ink); }
+  .donor-row:last-child { border-bottom: 1.5px solid var(--ink); }
+  .donor-row .name {
+    font-family: var(--tc);
+    color: var(--ink);
+    font-weight: 500;
+    font-size: 14.5px;
+  }
+  .donor-row .name .meta {
+    display: block;
+    font-family: var(--sans);
+    font-size: 11.5px;
+    color: var(--muted);
+    margin-top: 2px;
+    font-weight: 400;
+  }
+  .donor-row .bar-track {
+    height: 10px;
+    background: var(--line-soft);
+    position: relative;
+    overflow: hidden;
+  }
+  .donor-row .bar-fill {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    background: var(--blue);
+  }
+  .donor-row.alt .bar-fill { background: var(--ink); opacity: 0.3; }
+  .donor-row .rank {
+    font-family: var(--sans);
+    font-size: 12px;
+    color: var(--muted);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .timeline {
+    margin: 36px 0;
+    padding-left: 28px;
+    position: relative;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 8px; bottom: 8px;
+    width: 1.5px;
+    background: var(--line-mid);
+  }
+  .tl-item {
+    position: relative;
+    padding-bottom: 22px;
+  }
+  .tl-item::before {
+    content: "";
+    position: absolute;
+    left: -34px;
+    top: 8px;
+    width: 9px;
+    height: 9px;
+    background: var(--bg);
+    border: 1.5px solid var(--ink);
+    border-radius: 50%;
+  }
+  .tl-item.major::before {
+    background: var(--blue);
+    border-color: var(--blue);
+    width: 11px;
+    height: 11px;
+    left: -35px;
+  }
+  .tl-yr {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--blue);
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+  }
+  .tl-event {
+    font-family: var(--tc);
+    font-size: 14.5px;
+    color: var(--ink-2);
+    line-height: 1.55;
+    max-width: 640px;
+  }
+  .tl-event strong { color: var(--ink); font-weight: 600; }
+
+  .compare-block { margin: 36px 0; }
+  .compare-row {
+    display: grid;
+    grid-template-columns: 130px 1fr 80px;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line-soft);
+    font-size: 13.5px;
+  }
+  .compare-row:first-child { border-top: 1.5px solid var(--ink); }
+  .compare-row:last-child { border-bottom: 1.5px solid var(--ink); }
+  .compare-row.bih .name { color: var(--blue-deep); font-weight: 700; }
+  .compare-row .name { font-family: var(--tc); color: var(--ink-2); font-weight: 500; }
+  .compare-row .bar-track {
+    height: 7px;
+    background: var(--line-soft);
+    position: relative;
+  }
+  .compare-row .bar-fill {
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    background: var(--ink);
+    opacity: 0.45;
+  }
+  .compare-row.bih .bar-fill { background: var(--blue); opacity: 1; }
+  .compare-row .val {
+    font-family: var(--sans);
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    color: var(--ink);
+    font-weight: 500;
+    font-size: 13px;
+  }
+  .compare-row.bih .val { color: var(--blue-deep); font-weight: 700; }
+
+  .callout {
+    margin: 36px 0;
+    padding: 26px 30px;
+    background: var(--blue-soft);
+    border-left: 3px solid var(--blue);
+  }
+  .callout .ttl {
+    font-family: var(--tc);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--ink);
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+  .callout p {
+    margin-bottom: 0;
+    font-size: 14.5px;
+    color: var(--ink-2);
+  }
+
+  .pullquote {
+    margin: 44px 0;
+    padding: 22px 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+  }
+  .pullquote .q {
+    font-family: var(--tc);
+    font-weight: 500;
+    font-size: clamp(19px, 2.1vw, 24px);
+    line-height: 1.5;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+  }
+  .pullquote .src {
+    font-family: var(--tc);
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+
+  .refs h2 { margin-bottom: 28px; }
+  .refs ol {
+    list-style: none;
+    padding: 0;
+    counter-reset: ref;
+    columns: 2;
+    column-gap: 40px;
+  }
+  .refs li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 26px 1fr;
+    gap: 10px;
+    font-family: var(--sans);
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--ink-2);
+    counter-increment: ref;
+    break-inside: avoid;
+  }
+  .refs li::before {
+    content: counter(ref);
+    color: var(--muted);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+  .refs i { font-style: italic; color: var(--ink); font-weight: 500; }
+  .refs a { color: var(--blue); border-bottom: none; word-break: break-all; }
+  .refs a:hover { text-decoration: underline; }
+
+  @media (max-width: 1100px) {
+    .toc { display: none; }
+  }
+  @media (max-width: 720px) {
+    .wrap { padding: 0 24px; }
+    .hero { padding: 80px 0 56px; }
+    .kpi { grid-template-columns: repeat(2, 1fr); gap: 28px 24px; }
+    .donor-row { grid-template-columns: 130px 1fr 50px; gap: 14px; font-size: 13px; }
+    .donor-row .name { font-size: 13px; }
+    .compare-row { grid-template-columns: 100px 1fr 70px; gap: 12px; }
+    .refs ol { columns: 1; }
+    .toggle button { font-size: 11px; padding: 4px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<nav class="toc" id="toc">
+  <ol>
+    <li><a href="#sec1" data-id="sec1"><span class="num">01</span>援助規模</a></li>
+    <li><a href="#sec2" data-id="sec2"><span class="num">02</span>歷史時序</a></li>
+    <li><a href="#sec3" data-id="sec3"><span class="num">03</span>捐助者結構</a></li>
+    <li><a href="#sec4" data-id="sec4"><span class="num">04</span>條件性援助</a></li>
+    <li><a href="#sec5" data-id="sec5"><span class="num">05</span>援助悖論</a></li>
+    <li><a href="#sec6" data-id="sec6"><span class="num">06</span>結語</a></li>
+    <li><a href="#refs" data-id="refs"><span class="num">07</span>參考資料</a></li>
+  </ol>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <h1>援助國家中的國家</h1>
+    <p class="subhead">波士尼亞與赫塞哥維納的對外援助結構，從戰後重建到入盟條件性的三十年。</p>
+
+    <div class="byline">
+      <strong>李思憲</strong>　地理二　B13208013　·　2026 年 5 月
+    </div>
+
+    <p class="lede">波士尼亞與赫塞哥維納在發展援助的世界地圖上佔據一個耐人尋味的位置。它既不是赤貧的低所得國家，也不是非洲那種長期接受人道援助的典型受援國；它是一個距離歐盟邊界僅一步之遙、卻被超過三十年的國際介入結構性地塑造其政治經濟形態的「上中所得」候選國。</p>
+
+    <div class="kpi" id="kpi">
+      <div class="kpi-cell">
+        <div class="num">$<span data-target="21.8" data-decimal="1">0.0</span><span class="unit">B</span></div>
+        <div class="lbl">1994 年以來累計 ODA 流入</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="num">$<span data-target="1286">0</span><span class="unit">M</span></div>
+        <div class="lbl">1999 年單年 ODA 峰值</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="num">$<span data-target="284">0</span><span class="unit">M</span></div>
+        <div class="lbl">2022 年最新淨 ODA</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="num"><span class="accent" data-target="60">0</span><span class="unit">%</span></div>
+        <div class="lbl">1995 年 ODA 占 GNI 戰後峰值</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="num"><span class="accent" data-target="1.12" data-decimal="2">0.00</span><span class="unit">%</span></div>
+        <div class="lbl">2023 年 ODA 占 GNI 比重</div>
+      </div>
+      <div class="kpi-cell">
+        <div class="num">€<span data-target="976.6" data-decimal="1">0.0</span><span class="unit">M</span></div>
+        <div class="lbl">2024–27 改革與成長機制配額</div>
+      </div>
+    </div>
+  </header>
+
+  <section id="sec1">
+    <h2><span class="num">01</span>援助規模：從每年十億美元到每年三億美元</h2>
+
+    <p>1995 年代頓和平協議（Dayton Peace Agreement）簽訂時，波赫的國內生產毛額已跌落到戰前水準的二至三成，每人 GDP 不足 500 美元；1990 至 1995 年間，扣除服務業的 GDP 萎縮達 90%。戰前的 440 萬人口中，約 90 萬人成為境外難民，130 萬人在境內流離失所。這個基準解釋了為何戰後初期的援助規模在絕對與相對意義上都異常龐大。</p>
+
+    <p>世界銀行的世界發展指標（DT.ODA.ODAT.CD）逐年紀錄了波赫接受 ODA 的軌跡。1989 年只有 1 萬美元的紀錄性流入；到 1995 年急升至約 10 億美元水準；1999 年達到單年峰值 12.86 億美元；2014 年跌破 5 億美元；2018 年觸及戰後最低點 1.77% GNI；2021 年回升至 5.64 億美元；2022 年進一步下滑至 2.84 億美元。1989 至 2022 年的長期年度均值為 5.06 億美元。</p>
+
+    <div class="table-block">
+      <div class="table-title">表 1　波赫年度淨 ODA 流入：選定年度</div>
+      <table>
+        <thead>
+          <tr>
+            <th>年度</th>
+            <th class="num">淨 ODA（百萬美元）</th>
+            <th class="num">占 GNI</th>
+            <th>歷史脈絡</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="first">1989</td><td class="num">0.01</td><td class="num">—</td><td>戰前基準（南斯拉夫聯邦時期）</td></tr>
+          <tr class="emph"><td class="first">1995</td><td class="num">≈ 1,028</td><td class="num">59.5%</td><td>代頓協議當年；戰後初期峰值比</td></tr>
+          <tr class="emph"><td class="first">1999</td><td class="num">1,286</td><td class="num">≈ 26%</td><td>歷史峰值；國際重建持續高峰</td></tr>
+          <tr><td class="first">2005</td><td class="num">≈ 540</td><td class="num">5.7%</td><td>占中央政府支出 14.75%（峰值）</td></tr>
+          <tr><td class="first">2010</td><td class="num">≈ 510</td><td class="num">3.0%</td><td>金融危機後回升</td></tr>
+          <tr><td class="first">2014</td><td class="num">≈ 600</td><td class="num">3.5%</td><td>5 月大洪災；IDA 受援畢業</td></tr>
+          <tr><td class="first">2018</td><td class="num">≈ 350</td><td class="num">1.77%</td><td>戰後歷史最低 GNI 占比</td></tr>
+          <tr><td class="first">2019</td><td class="num">≈ 460</td><td class="num">2.30%</td><td>—</td></tr>
+          <tr><td class="first">2020</td><td class="num">≈ 700</td><td class="num">3.7%</td><td>COVID-19 緊急援助挹注</td></tr>
+          <tr><td class="first">2021</td><td class="num">564.4</td><td class="num">2.6%</td><td>後 COVID 階段</td></tr>
+          <tr><td class="first">2022</td><td class="num">283.9</td><td class="num">1.27%</td><td>最新值；MFA 撥款週期結束</td></tr>
+          <tr><td class="first">2023</td><td class="num">—</td><td class="num">1.12%</td><td>占 GNI 比例最新值</td></tr>
+        </tbody>
+      </table>
+      <div class="table-source">資料：World Bank, World Development Indicators（DT.ODA.ODAT.CD、DT.ODA.ODAT.GN.ZS）；IndexMundi 整理之 OECD-DAC 數據。占 GNI 欄位為當年淨 ODA／當年 GNI 的比例。</div>
+    </div>
+
+    <p>這條曲線換成佔 GNI 的比重後，下降幅度更為驚人：1995 年戰後初期高達 59.5%，到 2023 年僅剩 1.12%。波赫的國民所得毛額在 1996 至 2022 年間成長超過七倍，達 222.7 億美元，這個分母擴大本身就壓低了援助佔比。從另一個比例看，ODA 占中央政府支出在 2005 年達峰值 14.75%，2018 年觸底 5.04%，2019 年回升至 6.66%，這顯示即便絕對金額已大幅縮減，外部資源在波赫公共財政中仍非可忽略的成分。</p>
+
+    <div class="chart-block">
+      <div class="chart-head">
+        <div class="chart-title">圖 1　ODA 占 GNI 比重的長期軌跡（1995–2023）</div>
+        <div class="toggle">
+          <button class="active" data-view="log">對數刻度</button>
+          <button data-view="linear">USD 金額</button>
+        </div>
+      </div>
+
+      <div class="chart-wrap" id="chart-wrap">
+        <svg id="chart1" viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" role="img">
+          <g id="y-axis-log">
+            <text x="50" y="36" text-anchor="end" font-family="Manrope" font-size="11" fill="#6e6e73" font-weight="500">60%</text>
+            <text x="50" y="100" text-anchor="end" font-family="Manrope" font-size="11" fill="#6e6e73" font-weight="500">20%</text>
+            <text x="50" y="146" text-anchor="end" font-family="Manrope" font-size="11" fill="#6e6e73" font-weight="500">10%</text>
+            <text x="50" y="212" text-anchor="end" font-family="Manrope" font-size="11" fill="#6e6e73" font-weight="500">3%</text>
+            <text x="50" y="296" text-anchor="end" font-family="Manrope" font-size="11" fill="#6e6e73" font-weight="500">1%</text>
+            <line x1="58" y1="32" x2="860" y2="32" stroke="#f0f0f2" stroke-width="1"/>
+            <line x1="58" y1="100" x2="860" y2="100" stroke="#f0f0f2" stroke-width="1"/>
+            <line x1="58" y1="146" x2="860" y2="146" stroke="#f0f0f2" stroke-width="1"/>
+            <line x1="58" y1="212" x2="860" y2="212" stroke="#f0f0f2" stroke-width="1"/>
+            <line x1="58" y1="292" x2="860" y2="292" stroke="#0a0a0a" stroke-width="1"/>
+          </g>
+
+          <g id="y-axis-linear" style="display:none;">
+            <text x="50" y="36" text-anchor="end" font-family="Manrope" font-size="11" fill="#6e6e73" font-weight="500">$1,400M</text>
+            <text x="50" y="100" text-anchor="end" font-family="Manrope" font-size="11" fill="#6e6e73" font-weight="500">$1,000M</text>
+            <text x="50" y="164" text-anchor="end" font-family="Manrope" font-size="11" fill="#6e6e73" font-weight="500">$700M</text>
+            <text x="50" y="228" text-anchor="end" font-family="Manrope" font-size="11" fill="#6e6e73" font-weight="500">$400M</text>
+            <text x="50" y="292" text-anchor="end" font-family="Manrope" font-size="11" fill="#6e6e73" font-weight="500">$0</text>
+            <line x1="58" y1="32" x2="860" y2="32" stroke="#f0f0f2" stroke-width="1"/>
+            <line x1="58" y1="100" x2="860" y2="100" stroke="#f0f0f2" stroke-width="1"/>
+            <line x1="58" y1="164" x2="860" y2="164" stroke="#f0f0f2" stroke-width="1"/>
+            <line x1="58" y1="228" x2="860" y2="228" stroke="#f0f0f2" stroke-width="1"/>
+            <line x1="58" y1="292" x2="860" y2="292" stroke="#0a0a0a" stroke-width="1"/>
+          </g>
+
+          <g>
+            <text x="70" y="312" text-anchor="middle" font-family="Manrope" font-size="11" fill="#6e6e73">1995</text>
+            <text x="208" y="312" text-anchor="middle" font-family="Manrope" font-size="11" fill="#6e6e73">2000</text>
+            <text x="346" y="312" text-anchor="middle" font-family="Manrope" font-size="11" fill="#6e6e73">2005</text>
+            <text x="484" y="312" text-anchor="middle" font-family="Manrope" font-size="11" fill="#6e6e73">2010</text>
+            <text x="622" y="312" text-anchor="middle" font-family="Manrope" font-size="11" fill="#6e6e73">2015</text>
+            <text x="760" y="312" text-anchor="middle" font-family="Manrope" font-size="11" fill="#6e6e73">2020</text>
+            <text x="850" y="312" text-anchor="middle" font-family="Manrope" font-size="11" fill="#6e6e73">2023</text>
+          </g>
+
+          <g id="log-view">
+            <polyline fill="none" stroke="#2e4a73" stroke-width="2" stroke-linejoin="round"
+              points="70,32 99,76 180,86 264,134 346,175 484,212 622,248 718,275 760,262 803,255 824,272 850,285"/>
+            <g>
+              <circle class="chart-dot dot" data-yr="1995" data-val="59.5%" data-usd="$1,028M" cx="70" cy="32" r="4.5" fill="#2e4a73"/>
+              <circle class="chart-dot dot" data-yr="1999" data-val="≈ 26%" data-usd="$1,286M" cx="180" cy="86" r="4.5" fill="#2e4a73"/>
+              <circle class="chart-dot dot" data-yr="2005" data-val="5.7%" data-usd="≈ $540M" cx="346" cy="175" r="3.5" fill="#2e4a73"/>
+              <circle class="chart-dot dot" data-yr="2010" data-val="3.0%" data-usd="≈ $510M" cx="484" cy="212" r="3.5" fill="#2e4a73"/>
+              <circle class="chart-dot dot" data-yr="2014" data-val="3.5%" data-usd="≈ $600M" cx="622" cy="248" r="3.5" fill="#2e4a73"/>
+              <circle class="chart-dot dot" data-yr="2018" data-val="1.77%" data-usd="≈ $350M" cx="718" cy="275" r="3.5" fill="#2e4a73"/>
+              <circle class="chart-dot dot" data-yr="2020" data-val="3.7%" data-usd="≈ $700M" cx="760" cy="262" r="3.5" fill="#2e4a73"/>
+              <circle class="chart-dot dot" data-yr="2021" data-val="2.6%" data-usd="$564M" cx="803" cy="255" r="3.5" fill="#2e4a73"/>
+              <circle class="chart-dot dot" data-yr="2022" data-val="1.27%" data-usd="$284M" cx="824" cy="272" r="3.5" fill="#2e4a73"/>
+              <circle class="chart-dot dot" data-yr="2023" data-val="1.12%" data-usd="—" cx="850" cy="285" r="4.5" fill="#0a0a0a"/>
+            </g>
+          </g>
+
+          <g id="linear-view" style="display:none;">
+            <polyline fill="none" stroke="#2e4a73" stroke-width="2" stroke-linejoin="round"
+              points="70,109 99,157 180,40 264,222 346,210 484,215 622,200 718,250 760,165 803,200 824,265 850,272"/>
+            <g>
+              <circle class="chart-dot dot" data-yr="1995" data-val="$1,028M" data-usd="59.5% GNI" cx="70" cy="109" r="4.5" fill="#2e4a73"/>
+              <circle class="chart-dot dot" data-yr="1999" data-val="$1,286M" data-usd="26% GNI" cx="180" cy="40" r="4.5" fill="#2e4a73"/>
+              <circle class="chart-dot dot" data-yr="2005" data-val="≈ $540M" data-usd="5.7% GNI" cx="346" cy="210" r="3.5" fill="#2e4a73"/>
+              <circle class="chart-dot dot" data-yr="2010" data-val="≈ $510M" data-usd="3.0% GNI" cx="484" cy="215" r="3.5" fill="#2e4a73"/>
+              <circle class="chart-dot dot" data-yr="2014" data-val="≈ $600M" data-usd="3.5% GNI" cx="622" cy="200" r="3.5" fill="#2e4a73"/>
+              <circle class="chart-dot dot" data-yr="2018" data-val="≈ $350M" data-usd="1.77% GNI" cx="718" cy="250" r="3.5" fill="#2e4a73"/>
+              <circle class="chart-dot dot" data-yr="2020" data-val="≈ $700M" data-usd="3.7% GNI" cx="760" cy="165" r="3.5" fill="#2e4a73"/>
+              <circle class="chart-dot dot" data-yr="2021" data-val="$564M" data-usd="2.6% GNI" cx="803" cy="200" r="3.5" fill="#2e4a73"/>
+              <circle class="chart-dot dot" data-yr="2022" data-val="$284M" data-usd="1.27% GNI" cx="824" cy="265" r="3.5" fill="#2e4a73"/>
+            </g>
+          </g>
+
+          <text x="20" y="22" font-family="Manrope" font-size="9.5" fill="#8e8e93" font-weight="500" id="y-label">% GNI（對數）</text>
+        </svg>
+        <div class="tooltip" id="tooltip">
+          <span class="yr"></span><span class="val"></span>
+        </div>
+      </div>
+
+      <div class="chart-source">滑鼠停留圓點可看當年詳細數值，可切換對數刻度與 USD 金額兩種檢視。資料：World Bank, WDI（DT.ODA.ODAT.GN.ZS、DT.ODA.ODAT.CD）；International Crisis Group (1999) 對戰後初期比例的估算。</div>
+    </div>
+
+    <h3>跨國比較：波赫人均 ODA 在西巴爾幹的位置</h3>
+
+    <p>跨國比較能讓尺度更具體。2020 年波赫人均 ODA 為 132 美元，遠高於同年撒哈拉以南非洲的 58 美元平均。在西巴爾幹六國（WB6）內部，2023 年人均 GDP（美元現價）的差距同樣顯著：</p>
+
+    <div class="compare-block">
+      <div class="compare-row"><div class="name">蒙特內哥羅</div><div class="bar-track"><div class="bar-fill" style="width:63%;"></div></div><div class="val">$9,545</div></div>
+      <div class="compare-row"><div class="name">塞爾維亞</div><div class="bar-track"><div class="bar-fill" style="width:58%;"></div></div><div class="val">$8,748</div></div>
+      <div class="compare-row bih"><div class="name">波赫</div><div class="bar-track"><div class="bar-fill" style="width:47%;"></div></div><div class="val">$7,041</div></div>
+      <div class="compare-row"><div class="name">北馬其頓</div><div class="bar-track"><div class="bar-fill" style="width:44%;"></div></div><div class="val">$6,557</div></div>
+      <div class="compare-row"><div class="name">阿爾巴尼亞</div><div class="bar-track"><div class="bar-fill" style="width:42%;"></div></div><div class="val">$6,285</div></div>
+      <div class="compare-row"><div class="name">科索沃</div><div class="bar-track"><div class="bar-fill" style="width:29%;"></div></div><div class="val">$4,401</div></div>
+      <div class="compare-row" style="opacity:0.55;"><div class="name">克羅埃西亞（已入盟）</div><div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div><div class="val">$16,247</div></div>
+    </div>
+    <div class="chart-source" style="margin-top: 6px;">2023 年西巴爾幹六國人均 GDP 比較（克羅埃西亞為已入盟對照組）。資料：World Bank / Viborc 整理。</div>
+
+    <p>波赫的人均 GDP 既非最低也非最高，但 2003–2024 年間它的「歐盟趨同」進度卻是西巴爾幹六國中最慢的—僅縮小 11 個百分點的歐盟均值差距，遠低於塞爾維亞的 18 pp、阿爾巴尼亞與北馬其頓的 16 pp。同期間波赫人口萎縮達 24%，是整個東歐候選國中最劇烈的。換言之，外援雖然規模收斂，但結構性挑戰（人口外移、收入趨同遲滯）並未隨之解決。</p>
+  </section>
+
+  <section id="sec2">
+    <h2><span class="num">02</span>三十年的關鍵時序</h2>
+
+    <p>把時間軸拉長，波赫的對外援助史可以濃縮為十四個關鍵節點。每個節點都是一次政策、危機、或制度設計的轉折，共同形塑了今日的援助結構。</p>
+
+    <div class="timeline">
+      <div class="tl-item major"><div class="tl-yr">1995 年 12 月</div><div class="tl-event"><strong>代頓和平協議簽訂</strong>。OHR（高代表辦公室）與 PIC（和平實施委員會）成立，開啟國際社會對波赫的「非正式託管」。</div></div>
+      <div class="tl-item"><div class="tl-yr">1995–1996</div><div class="tl-event">國際社會湧入。當年 ODA 達 GNI 的 <strong>59.5%</strong>，重建期需求極為龐大。</div></div>
+      <div class="tl-item major"><div class="tl-yr">1999</div><div class="tl-event"><strong>單年 ODA 達歷史峰值 12.86 億美元</strong>。國際危機組織同年警告，若無外援，波赫經濟成長將為負值。</div></div>
+      <div class="tl-item"><div class="tl-yr">2003</div><div class="tl-event">歐盟在 Thessaloniki 峰會明確提出西巴爾幹的入盟前景。波赫被定位為「潛在候選國」。</div></div>
+      <div class="tl-item"><div class="tl-yr">2005</div><div class="tl-event">ODA 占中央政府支出比例達歷史峰值 <strong>14.75%</strong>。</div></div>
+      <div class="tl-item"><div class="tl-yr">2008–2012</div><div class="tl-event">全球金融危機；歐元區危機波及波赫。失業率上升、結構性問題浮現。</div></div>
+      <div class="tl-item"><div class="tl-yr">2014 年 5 月</div><div class="tl-event"><strong>百年大洪災</strong>，造成超過 8 億歐元損失；同年波赫從 IDA 受援者畢業。IPA II 啟動，波赫獲 5.521 億歐元配額。</div></div>
+      <div class="tl-item"><div class="tl-yr">2018</div><div class="tl-event">ODA 占 GNI 觸及戰後歷史低點 <strong>1.77%</strong>。</div></div>
+      <div class="tl-item major"><div class="tl-yr">2020 年 7 月</div><div class="tl-event"><strong>COVID-19 緊急援助</strong>。歐盟撥付 2.5 億歐元 MFA 貸款 + 0.95 億歐元補助，加上 130 萬劑疫苗。</div></div>
+      <div class="tl-item major"><div class="tl-yr">2022 年 12 月 15 日</div><div class="tl-event"><strong>歐盟正式授予候選國地位</strong>。波赫是西巴爾幹六國中最後一個取得這個地位的國家。</div></div>
+      <div class="tl-item"><div class="tl-yr">2023</div><div class="tl-event">波赫成為 IDA 認捐國，與亞美尼亞、喬治亞並列首批東歐三國加入捐助行列。</div></div>
+      <div class="tl-item major"><div class="tl-yr">2024 年 5 月</div><div class="tl-event"><strong>改革與成長機制（RGF）生效</strong>。整個西巴爾幹六國總額 60 億歐元（2024–27），波赫初始配額 10.85 億歐元。</div></div>
+      <div class="tl-item"><div class="tl-yr">2025 年中</div><div class="tl-event">波赫部長理事會未能準時提交「改革議程」。歐盟削減其配額 10%，至 9.766 億歐元。</div></div>
+      <div class="tl-item major"><div class="tl-yr">2025 年 12 月 4 日</div><div class="tl-event"><strong>歐盟核可波赫的改革議程</strong>。改革與成長機制款項可開始撥付，待簽署正式協議。</div></div>
+    </div>
+  </section>
+
+  <section id="sec3">
+    <h2><span class="num">03</span>捐助者結構：歐美主導下的多層體制</h2>
+
+    <p>學界以 OECD Creditor Reporting System 為基礎整理出兩份相互呼應的捐助者排名。Avdić 等人（2025）發表於《World Development》的研究指出，自 1994 年以來，國際捐助社群對波赫累計投入的總額約 218 億美元，居前的依序為歐盟機構、美國、德國、世界銀行、奧地利。Opršal 等人（2025）在《Europe-Asia Studies》使用 OECD 2025 年資料則指出，1992 至 2022 年的前五大捐助者為歐盟機構、美國、德國、奧地利、荷蘭。兩份排名核心一致：歐盟領頭，美德並列要角，西歐與其後鄰國形成第二圈，灣岸（UAE、沙國）與土耳其在族群與宗教文化的軸線上扮演補充角色。</p>
+
+    <div class="chart-block">
+      <div class="chart-title">圖 2　波赫累計 ODA 捐助者相對規模（1992–2022）</div>
+      <div class="donor-block">
+        <div class="donor-row">
+          <div class="name">歐盟機構<span class="meta">EU institutions</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div>
+          <div class="rank">第一</div>
+        </div>
+        <div class="donor-row">
+          <div class="name">美國<span class="meta">United States · USAID</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:62%;"></div></div>
+          <div class="rank">第二</div>
+        </div>
+        <div class="donor-row">
+          <div class="name">德國<span class="meta">Germany · BMZ / KfW</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:48%;"></div></div>
+          <div class="rank">第三</div>
+        </div>
+        <div class="donor-row">
+          <div class="name">奧地利<span class="meta">Austria · ADA</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:32%;"></div></div>
+          <div class="rank">第四</div>
+        </div>
+        <div class="donor-row">
+          <div class="name">荷蘭／世界銀行<span class="meta">Netherlands / IBRD-IDA</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:24%;"></div></div>
+          <div class="rank">第五</div>
+        </div>
+        <div class="donor-row alt">
+          <div class="name">UAE・沙國・土耳其<span class="meta">Non-DAC partners</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:14%;"></div></div>
+          <div class="rank">非 DAC</div>
+        </div>
+      </div>
+      <div class="chart-source">橫條長度為示意比例，非精確分配比；實際排序整合自 Avdić et al. (2025) 與 Opršal et al. (2025) 兩份基於 OECD 資料的研究。</div>
+    </div>
+
+    <h3>第一層：歐盟工具的精確金額</h3>
+
+    <p>歐盟透過多個並行的金融工具向波赫輸送資源，每一個都有可追溯的金額紀錄。下表將近十年來主要工具的撥款規模並列，使「歐盟援助波赫」從一個籠統的標籤，還原為一份具體的資金清單。</p>
+
+    <div class="table-block">
+      <div class="table-title">表 2　歐盟主要援助工具對波赫的撥款規模</div>
+      <table>
+        <thead>
+          <tr>
+            <th>工具</th>
+            <th>期間</th>
+            <th class="num">金額</th>
+            <th>性質</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="first">IPA II 國家配額</td><td>2014–2020</td><td class="num">€552.1M</td><td>入盟前贈款</td></tr>
+          <tr><td class="first">COVID-19 MFA</td><td>2020–2021</td><td class="num">€250.0M</td><td>優惠貸款</td></tr>
+          <tr><td class="first">COVID-19 補助組合</td><td>2020–2021</td><td class="num">€95.0M</td><td>贈款（疫苗、PPE、社經）</td></tr>
+          <tr><td class="first">WBIF 旗艦投資贈款</td><td>2020–2024</td><td class="num">€824.0M</td><td>贈款，含 IPA 821.4M</td></tr>
+          <tr><td class="first">IPA III 主題式撥款</td><td>2021–2027</td><td class="num">€14,162M（區域）</td><td>績效本位，無國家配額</td></tr>
+          <tr class="emph"><td class="first">改革與成長機制 RGF</td><td>2024–2027</td><td class="num">€976.6M</td><td>贈款 + 優惠貸款</td></tr>
+        </tbody>
+      </table>
+      <div class="table-source">資料：European Commission DG NEAR；DEI BiH；WBIF；EUR-Lex。</div>
+    </div>
+
+    <p>2020 至 2024 年間，西巴爾幹投資架構（WBIF）為波赫的 13 件「經濟與投資計畫」旗艦案挹注 8.24 億歐元贈款，撬動 24 億歐元的投資總量；其中 8.214 億來自 IPA 資金，2.6 百萬來自雙邊捐助者直接挹注。COVID-19 時期，歐盟以單一波赫案就撥付 2.5 億歐元 MFA 貸款與 0.95 億歐元補助組合（含 1,370 萬歐元疫苗、776 萬歐元醫療物資、7,350 萬歐元社經復甦），加上送出近 130 萬劑疫苗。這些工具疊合起來，讓歐盟在過去十年的累計投入規模遠遠領先任何單一雙邊捐助者。</p>
+
+    <h3>第二層：雙邊捐助者</h3>
+
+    <p>美國透過 USAID 自 1995 年以來累計提供超過 18 億美元，焦點包括法治、私部門發展、與族群和解；其發展合作策略明白將援助連結到波赫加入歐盟與北約的目標。德國是波赫長期的經濟夥伴，2022 年雙邊貿易額達 28 億歐元，德國聯邦政府透過經濟合作部（BMZ）支持永續經濟發展、再生能源、能源效率以及公民社會建構。瑞典在 2021–2027 年改革合作策略下將波赫定位為西巴爾幹優先夥伴，重點為人權民主、性別平等、與綠色轉型。挪威、瑞士、義大利、英國各以較小但穩定的規模長期參與。</p>
+
+    <h3>第三層：多邊金融機構</h3>
+
+    <p>世界銀行集團自 1993 年介入波赫；國際開發協會（IDA）的初期支援包括重建莫斯塔爾舊橋（Stari Most）等指標性基礎建設。波赫於 2014 年從 IDA 受援者畢業，於 2023 年正式成為 IDA 捐助國，與亞美尼亞、喬治亞並列首批東歐三國加入捐助行列。世界銀行 2022–2026 年國家夥伴架構規劃了高達 7.5 億美元的新貸款額度，重點為私部門就業、永續服務遞送與氣候韌性。歐洲投資銀行、歐洲復興開發銀行（EBRD）、聯合國開發計畫署則分別在基礎建設、私部門金融與制度發展軸線上補位。</p>
+  </section>
+
+  <section id="sec4">
+    <h2><span class="num">04</span>改革與成長機制：條件性援助的最新轉折</h2>
+
+    <p>歐盟援助波赫的最新章節是「西巴爾幹改革與成長機制」（Reform and Growth Facility，RGF）。這項在 2024 年 5 月生效的工具，總額 60 億歐元，由 20 億補助與 40 億優惠貸款構成，覆蓋阿爾巴尼亞、波赫、科索沃、蒙特內哥羅、北馬其頓與塞爾維亞，期程 2024 至 2027 年；其中至少 50% 將透過 WBIF 用於投資（總額至少 30 億歐元），其餘以最高 26.1 億歐元的優惠貸款直接撥入受援國國庫。其核心設計是「績效本位」：金錢的釋出綁定在受援國具體完成綠色與數位轉型、私部門發展、法治改革等步驟之上。</p>
+
+    <div class="callout">
+      <div class="ttl">9.766 億歐元，加上被砍掉的 1.085 億歐元</div>
+      <p>波赫在 RGF 下的初始指示性撥款為 10.85 億歐元。因部長理事會無法在期限前達成國內政治共識、未能準時提交「改革議程」（Reform Agenda），歐盟在 2025 年將其撥款額度直接削減 10%，下調至 9.766 億歐元。歐洲對外行動署（EEAS）在公告中明白寫道「無作為亦有代價」。波赫成為西巴爾幹六國中最後一個提交議程的國家，最終於 2025 年 9 月 30 日由部長理事會通過、2025 年 12 月 4 日獲執委會核可。</p>
+    </div>
+
+    <p>這一段插曲將「條件性援助」的政治邏輯具體呈現。歐盟並非單純把錢轉給政府，而是透過撥款機制將外部目標—主要是入盟前的法律、機構、經濟調適—嵌入受援國的改革節奏。批評者認為這種設計強化了所謂「主權悖論」：候選國為了得到資金而採行特定改革，但密集的外部介入也削弱在地政治體制自行成熟的機會（Chandler 2006）。對波赫而言，這個悖論因為代頓體制的內在分權與族群否決機制（ethnic veto）顯得格外尖銳—任何整合性的全國改革都需要先克服三族群權力分配的政治阻力。</p>
+  </section>
+
+  <section id="sec5">
+    <h2><span class="num">05</span>援助悖論：依賴、政治化與發展失能</h2>
+
+    <p>如果只看數字，波赫的援助故事是一則「成功遞減」的敘事：戰後早期高度依賴，逐步降低，2023 年甚至能反向投入 IDA。但細看之下，這個敘事掩蓋了兩個結構性的疑問。</p>
+
+    <p>第一是制度依賴。代頓協議建立了高代表辦公室（OHR）與和平實施委員會（PIC），賦予國際代表否決波赫立法、解職民選官員的所謂「波恩權力」（Bonn Powers）。這套被學者形容為「非正式託管」（informal trusteeship）的安排，使得波赫在三十年間始終缺乏完整的自我發展制度與承擔政治後果的空間。即便援助規模隨時間下降，這套上層治理結構仍在實質運作，2025 年 OHR 仍多次介入波赫內部憲政事務。</p>
+
+    <div class="pullquote">
+      <div class="q">波赫沒有經歷自行發展制度與能力時必要的、有時動盪的形塑過程；國家因而仍是低度發展且依賴的。</div>
+      <div class="src">Embeddedness, Conformity, and Bad State-Building，Claremont 2014</div>
+    </div>
+
+    <p>第二是發展失能的弔詭。波赫今日面對的核心挑戰並非外援不足，而是大規模青年外移（2003–2023 年人口萎縮 24%，西巴爾幹最劇烈）、人口老化、技術勞動力流失、城鄉差距擴大、高度官僚化的多層行政、以及持續性的腐敗與「國家擄獲」（state capture）問題。Bartlett（2021）指出，部分捐助資源實際上透過扈從式分配進入在地菁英網絡，反而強化既有的恩庇結構。換句話說，若條件性的執行不夠嚴格，援助有可能成為依賴的潤滑劑而非變革的催化劑。</p>
+
+    <p>從 GeoAI 與空間資料科學的視角觀察，波赫的次國家（subnational）援助分配研究目前才正起步。Dušková（2026）與 Avdić、Opršal 等人的近期工作開始把 ODA 數據與市政層級的社經指標、族群結構放在同一張地圖上分析。研究發現族群、政治距離、地理可及性都顯著影響資源落點：穆斯林背景捐助者（沙國、UAE、卡達）的資金較多流向波士尼亞克社群所在地，土耳其因鄂圖曼歷史紐帶亦呈類似偏向。這對於檢驗「援助是否抵達最需要的地方」、「援助是否加深或弱化族群空間隔離」這類問題至關重要，也是把開放援助資料（如 IATI、OpenAid.se）與空間分析方法接合的實證舞台。</p>
+  </section>
+
+  <section id="sec6">
+    <h2><span class="num">06</span>結語</h2>
+
+    <p>波赫不是一個容易被歸類的受援國。它的人均 GNI 已逼近上中所得門檻、2023 年甚至跨入 IDA 捐助者行列，預期在不久的將來會自然脫離 DAC 名單；同時它的政治結構又因戰爭遺產而被深度國際化，使得「援助」與「主權」、「條件性」與「自主性」始終糾結。從 218 億美元的累計投入、到 9.766 億歐元的下個七年條件性方案，數字本身已經訴說了一個故事：援助規模的下降並不等同於援助結構性影響力的退場。從台灣的視角觀察，這個案例提醒我們：發展援助絕非中性的技術活動，它的尺度、流向與條件，都在重塑受援國的政治可能性。</p>
+  </section>
+
+  <section id="refs" class="refs">
+    <h2><span class="num">07</span>參考資料</h2>
+    <ol>
+      <li><span><i>OECD (2024).</i> DAC List of ODA Recipients. <a href="https://www.oecd.org/content/dam/oecd/en/topics/policy-sub-issues/oda-eligibility-and-conditions/DAC-List-of-ODA-Recipients-for-reporting-2024-25-flows.pdf">oecd.org</a></span></li>
+      <li><span><i>Avdić, A. et al. (2025).</i> Foreign aid in a divided country. <i>World Development</i>. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0305750X25002232">sciencedirect.com</a></span></li>
+      <li><span><i>The Global Economy / WB WDI (2024).</i> Bosnia foreign aid 1989–2022. <a href="https://www.theglobaleconomy.com/Bosnia-and-Herzegovina/foreign_aid/">theglobaleconomy.com</a></span></li>
+      <li><span><i>Dušková, L. (2026).</i> Sub-National Aid Allocation in Bosnia. <i>JID</i>. DOI: 10.1002/jid.70053. <a href="https://onlinelibrary.wiley.com/doi/10.1002/jid.70053">onlinelibrary.wiley.com</a></span></li>
+      <li><span><i>World Bank (2024).</i> WDI – BiH Net ODA. <a href="https://data.worldbank.org/indicator/DT.ODA.ODAT.GN.ZS?locations=BA">data.worldbank.org</a></span></li>
+      <li><span><i>DEI BiH.</i> IPA II – €552.1M. <a href="https://www.dei.gov.ba/en/instrument-for-pre-accession-assistance">dei.gov.ba</a></span></li>
+      <li><span><i>ICG (1999).</i> Is Dayton Failing? <a href="https://www.refworld.org/reference/countryrep/icg/1999/en/77973">refworld.org</a></span></li>
+      <li><span><i>Trading Economics / WB WDI.</i> BiH Net ODA per capita. <a href="https://tradingeconomics.com/bosnia-and-herzegovina/net-oda-received-per-capita-us-dollar-wb-data.html">tradingeconomics.com</a></span></li>
+      <li><span><i>Opršal, Z. et al. (2025).</i> Political and Ethnic Biases? <i>Europe-Asia Studies</i>. <a href="https://www.tandfonline.com/doi/full/10.1080/09668136.2025.2516654">tandfonline.com</a></span></li>
+      <li><span><i>WBIF (2024).</i> WBIF in BiH 2020–2024. <a href="https://www.wbif.eu/beneficiaries/bosnia-and-herzegovina">wbif.eu</a></span></li>
+      <li><span><i>EC DG NEAR (2021).</i> €125M MFA disbursed to BiH. <a href="https://enlargement.ec.europa.eu/news/eu-disburses-eu125-million-macro-financial-assistance-bosnia-and-herzegovina-2021-10-08_en">enlargement.ec.europa.eu</a></span></li>
+      <li><span><i>EC DG NEAR (2024).</i> IPA III €14.162B. <a href="https://enlargement.ec.europa.eu/funding-technical-assistance/overview-instrument-pre-accession-assistance_en">enlargement.ec.europa.eu</a></span></li>
+      <li><span><i>EEAS (2025).</i> Cut to BiH allocation under Growth Plan. <a href="https://www.eeas.europa.eu/delegations/bosnia-and-herzegovina/cut-bosnia-and-herzegovina%E2%80%99s-allocation-under-growth-plan_en">eeas.europa.eu</a></span></li>
+      <li><span><i>EC (2024).</i> RGF for Western Balkans. Reg. (EU) 2024/1449. <a href="https://enlargement.ec.europa.eu/funding-technical-assistance/reform-and-growth-facility-western-balkans_en">enlargement.ec.europa.eu</a></span></li>
+      <li><span><i>USAID (2020).</i> BiH Country Profile – cumulative US$1.8B. <a href="https://2017-2020.usaid.gov/bosnia/news-information/fact-sheets/fact-sheet-bosnia-and-herzegovina-country-profile">usaid.gov</a></span></li>
+      <li><span><i>German FFO (2024).</i> Germany–BiH bilateral relations. <a href="https://www.auswaertiges-amt.de/en/aussenpolitik/laenderinformationen/bosnienherzegowina-node/bosnia-and-herzegovina/228116">auswaertiges-amt.de</a></span></li>
+      <li><span><i>Embassy of Sweden Sarajevo.</i> Strategy 2021–2027. <a href="https://www.swedenabroad.se/en/about-sweden-non-swedish-citizens/bosnia-and-herzegovina/development-and-aid/">swedenabroad.se</a></span></li>
+      <li><span><i>World Bank (2024).</i> IDA welcomes new donors. <a href="https://blogs.worldbank.org/en/europeandcentralasia/road-crisis-recovery-ida-welcomes-armenia-bosnia-and-herzegovina-and-georgia">blogs.worldbank.org</a></span></li>
+      <li><span><i>World Bank (2024).</i> CPF 2022–2026. <a href="https://www.worldbank.org/en/country/bosniaandherzegovina/brief/bosnia-and-herzegovina-and-the-world-bank-group-30-years-of-partnership">worldbank.org</a></span></li>
+      <li><span><i>EC (2025-12-04).</i> BiH Reform Agenda approved. <a href="https://enlargement.ec.europa.eu/news/commission-approves-bosnia-and-herzegovinas-reform-agenda-2025-12-04_en">enlargement.ec.europa.eu</a></span></li>
+      <li><span><i>Chandler, D. (2006).</i> State-building in Bosnia. 引自 Embeddedness, Conformity, and Bad State-Building (Claremont, 2014). <a href="https://scholarship.claremont.edu/cgi/viewcontent.cgi?article=1068&context=urceu">claremont.edu</a></span></li>
+      <li><span><i>IndexMundi / WB WDI.</i> BiH ODA % GNI / govt expense / capital formation. <a href="https://www.indexmundi.com/facts/bosnia-and-herzegovina/net-oda-received">indexmundi.com</a></span></li>
+      <li><span><i>Viborc / WB (2023).</i> WB6 GDP per capita comparison. <a href="https://viborc.com/comparison-slovenia-croatia-western-balkans-gdp-ppp-hdi/">viborc.com</a></span></li>
+      <li><span><i>Bruegel (2024).</i> Economic convergence: EU candidates 2003–2024. <a href="https://www.bruegel.org/analysis/economic-convergence-demography-labour-markets-what-progress-have-eu-candidate-countries">bruegel.org</a></span></li>
+    </ol>
+  </section>
+
+</div>
+
+<script>
+const progressBar = document.getElementById('progress');
+function updateProgress() {
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  progressBar.style.width = (window.scrollY / total * 100) + '%';
+}
+window.addEventListener('scroll', updateProgress, { passive: true });
+
+function animateCount(el, target, decimal = 0, duration = 1400) {
+  const start = performance.now();
+  function step(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = target * eased;
+    el.textContent = decimal === 0
+      ? Math.round(value).toLocaleString()
+      : value.toFixed(decimal);
+    if (progress < 1) requestAnimationFrame(step);
+    else el.textContent = decimal === 0 ? Math.round(target).toLocaleString() : target.toFixed(decimal);
+  }
+  requestAnimationFrame(step);
+}
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      if (entry.target.id === 'kpi') {
+        entry.target.querySelectorAll('[data-target]').forEach(el => {
+          const target = parseFloat(el.dataset.target);
+          const decimal = parseInt(el.dataset.decimal ?? '0');
+          animateCount(el, target, decimal);
+        });
+      }
+      io.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('#kpi').forEach(el => io.observe(el));
+
+const tooltip = document.getElementById('tooltip');
+const tooltipYr = tooltip.querySelector('.yr');
+const tooltipVal = tooltip.querySelector('.val');
+const chartWrap = document.getElementById('chart-wrap');
+
+document.querySelectorAll('.dot').forEach(dot => {
+  dot.addEventListener('mouseenter', e => {
+    const yr = e.target.getAttribute('data-yr');
+    const val = e.target.getAttribute('data-val');
+    const usd = e.target.getAttribute('data-usd');
+    tooltipYr.textContent = yr;
+    tooltipVal.textContent = val + '   ' + usd;
+    tooltip.classList.add('visible');
+
+    const dotRect = e.target.getBoundingClientRect();
+    const wrapRect = chartWrap.getBoundingClientRect();
+    tooltip.style.left = (dotRect.left - wrapRect.left + 12) + 'px';
+    tooltip.style.top = (dotRect.top - wrapRect.top - 38) + 'px';
+  });
+  dot.addEventListener('mouseleave', () => {
+    tooltip.classList.remove('visible');
+  });
+});
+
+const toggleBtns = document.querySelectorAll('.toggle button');
+const logView = document.getElementById('log-view');
+const linearView = document.getElementById('linear-view');
+const yAxisLog = document.getElementById('y-axis-log');
+const yAxisLinear = document.getElementById('y-axis-linear');
+const yLabel = document.getElementById('y-label');
+
+toggleBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    toggleBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const view = btn.dataset.view;
+    if (view === 'log') {
+      logView.style.display = 'block';
+      linearView.style.display = 'none';
+      yAxisLog.style.display = 'block';
+      yAxisLinear.style.display = 'none';
+      yLabel.textContent = '% GNI（對數）';
+    } else {
+      logView.style.display = 'none';
+      linearView.style.display = 'block';
+      yAxisLog.style.display = 'none';
+      yAxisLinear.style.display = 'block';
+      yLabel.textContent = 'USD（百萬）';
+    }
+  });
+});
+
+const tocLinks = document.querySelectorAll('.toc a');
+const sections = document.querySelectorAll('section[id]');
+
+function updateTOC() {
+  let current = '';
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top <= 200) current = sec.id;
+  });
+  tocLinks.forEach(link => {
+    link.classList.toggle('active', link.dataset.id === current);
+  });
+}
+window.addEventListener('scroll', updateTOC, { passive: true });
+updateTOC();
+</script>
+
+</body>
+</html>
