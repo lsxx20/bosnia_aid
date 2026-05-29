@@ -23,7 +23,7 @@
     --line-mid: #c8c0b0;
     --rule: #1a1a1a;
 
-    /* Quanta signature accent — burnt orange/red */
+    /* navy accent */
     --accent: #2c4a7c;
     --accent-deep: #1a3458;
     --accent-soft: #eaeef5;
@@ -297,18 +297,6 @@
     font-weight: 500;
   }
 
-  /* Section divider — geometric ornament between sections */
-  .divider {
-    text-align: center;
-    margin: 56px 0;
-    padding: 0;
-  }
-  .divider svg {
-    width: 56px;
-    height: 18px;
-    opacity: 0.85;
-  }
-
   /* Sections */
   section { padding: 12px 0 32px; }
 
@@ -353,18 +341,6 @@
     text-justify: inter-ideograph;
   }
   p strong { color: var(--ink); font-weight: 700; }
-
-  /* First paragraph after h2 gets a small drop cap */
-  section > p:first-of-type::first-letter,
-  h2 + p::first-letter {
-    font-family: var(--serif-zh);
-    font-weight: 700;
-    font-size: 3.2em;
-    float: left;
-    line-height: 0.92;
-    padding: 6px 10px 0 0;
-    color: var(--ink);
-  }
 
   h3 {
     font-family: var(--sans-zh);
@@ -694,19 +670,6 @@
     border-left: 3px solid var(--accent);
     position: relative;
   }
-  .callout::before {
-    content: 'NOTE';
-    position: absolute;
-    top: -10px;
-    left: 24px;
-    background: var(--bg);
-    padding: 0 10px;
-    font-family: var(--sans-en);
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--accent);
-    letter-spacing: 0.2em;
-  }
   .callout .ttl {
     font-family: var(--sans-zh);
     font-weight: 700;
@@ -739,32 +702,12 @@
     text-align: center;
     position: relative;
   }
-  .pullquote::before {
-    content: '';
-    display: block;
-    width: 56px;
-    height: 14px;
-    margin: 0 auto 28px;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 14'><circle cx='8' cy='7' r='3' fill='%23c8302a'/><circle cx='28' cy='7' r='3' fill='%231a1a1a'/><circle cx='48' cy='7' r='3' fill='%23c8302a'/></svg>");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .pullquote::after {
-    content: '';
-    display: block;
-    width: 56px;
-    height: 14px;
-    margin: 28px auto 0;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 14'><circle cx='8' cy='7' r='3' fill='%23c8302a'/><circle cx='28' cy='7' r='3' fill='%231a1a1a'/><circle cx='48' cy='7' r='3' fill='%23c8302a'/></svg>");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
   .pullquote .q {
     font-family: var(--serif-zh);
-    font-style: italic;
+    font-style: normal;
     font-weight: 500;
-    font-size: clamp(22px, 2.5vw, 28px);
-    line-height: 1.45;
+    font-size: clamp(19px, 2.1vw, 23px);
+    line-height: 1.5;
     color: var(--ink);
     letter-spacing: -0.005em;
     margin-bottom: 16px;
@@ -845,7 +788,7 @@
     .refs ol { columns: 1; }
     .toggle button { font-size: 10.5px; padding: 4px 10px; }
     .callout { padding: 24px 22px; }
-    .pullquote .q { font-size: 20px; }
+    .pullquote .q { font-size: 18px; }
   }
 </style>
 </head>
@@ -914,10 +857,6 @@
         <div class="lbl">2024–27 改革與成長機制配額</div>
       </div>
     </div>
-  </div>
-
-  <div class="divider">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 14"><circle cx="8" cy="7" r="3" fill="#2c4a7c"/><circle cx="28" cy="7" r="3" fill="#1a1a1a"/><circle cx="48" cy="7" r="3" fill="#2c4a7c"/></svg>
   </div>
 
   <section id="sec1">
@@ -1066,10 +1005,6 @@
     <p>波赫的人均 GDP 既非最低也非最高，但 2003–2024 年間它的「歐盟趨同」進度卻是西巴爾幹六國中最慢的—僅縮小 11 個百分點的歐盟均值差距，遠低於塞爾維亞的 18 pp、阿爾巴尼亞與北馬其頓的 16 pp。同期間波赫人口萎縮達 24%，是整個東歐候選國中最劇烈的。換言之，外援雖然規模收斂，但結構性挑戰（人口外移、收入趨同遲滯）並未隨之解決。</p>
   </section>
 
-  <div class="divider">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 14"><circle cx="8" cy="7" r="3" fill="#2c4a7c"/><circle cx="28" cy="7" r="3" fill="#1a1a1a"/><circle cx="48" cy="7" r="3" fill="#2c4a7c"/></svg>
-  </div>
-
   <section id="sec2">
     <h2><span class="num">Part 02</span>三十年的關鍵時序</h2>
 
@@ -1092,10 +1027,6 @@
       <div class="tl-item major"><div class="tl-yr">DEC 4, 2025</div><div class="tl-event"><strong>歐盟核可波赫的改革議程</strong>。改革與成長機制款項可開始撥付，待簽署正式協議。</div></div>
     </div>
   </section>
-
-  <div class="divider">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 14"><circle cx="8" cy="7" r="3" fill="#2c4a7c"/><circle cx="28" cy="7" r="3" fill="#1a1a1a"/><circle cx="48" cy="7" r="3" fill="#2c4a7c"/></svg>
-  </div>
 
   <section id="sec3">
     <h2><span class="num">Part 03</span>捐助者結構：歐美主導下的多層體制</h2>
@@ -1177,10 +1108,6 @@
     <p>世界銀行集團自 1993 年介入波赫；國際開發協會（IDA）的初期支援包括重建莫斯塔爾舊橋（Stari Most）等指標性基礎建設。波赫於 2014 年從 IDA 受援者畢業，於 2023 年正式成為 IDA 捐助國，與亞美尼亞、喬治亞並列首批東歐三國加入捐助行列。世界銀行 2022–2026 年國家夥伴架構規劃了高達 7.5 億美元的新貸款額度，重點為私部門就業、永續服務遞送與氣候韌性。歐洲投資銀行、歐洲復興開發銀行（EBRD）、聯合國開發計畫署則分別在基礎建設、私部門金融與制度發展軸線上補位。</p>
   </section>
 
-  <div class="divider">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 14"><circle cx="8" cy="7" r="3" fill="#2c4a7c"/><circle cx="28" cy="7" r="3" fill="#1a1a1a"/><circle cx="48" cy="7" r="3" fill="#2c4a7c"/></svg>
-  </div>
-
   <section id="sec4">
     <h2><span class="num">Part 04</span>改革與成長機制：條件性援助的最新轉折</h2>
 
@@ -1193,10 +1120,6 @@
 
     <p>這一段插曲將「條件性援助」的政治邏輯具體呈現。歐盟並非單純把錢轉給政府，而是透過撥款機制將外部目標—主要是入盟前的法律、機構、經濟調適—嵌入受援國的改革節奏。批評者認為這種設計強化了所謂「主權悖論」：候選國為了得到資金而採行特定改革，但密集的外部介入也削弱在地政治體制自行成熟的機會（Chandler 2006）。對波赫而言，這個悖論因為代頓體制的內在分權與族群否決機制（ethnic veto）顯得格外尖銳—任何整合性的全國改革都需要先克服三族群權力分配的政治阻力。</p>
   </section>
-
-  <div class="divider">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 14"><circle cx="8" cy="7" r="3" fill="#2c4a7c"/><circle cx="28" cy="7" r="3" fill="#1a1a1a"/><circle cx="48" cy="7" r="3" fill="#2c4a7c"/></svg>
-  </div>
 
   <section id="sec5">
     <h2><span class="num">Part 05</span>援助悖論：依賴、政治化與發展失能</h2>
@@ -1213,10 +1136,6 @@
     <p>第二是發展失能的弔詭。波赫今日面對的核心挑戰並非外援不足，而是大規模青年外移（2003–2023 年人口萎縮 24%，西巴爾幹最劇烈）、人口老化、技術勞動力流失、城鄉差距擴大、高度官僚化的多層行政、以及持續性的腐敗與「國家擄獲」（state capture）問題。Bartlett（2021）指出，部分捐助資源實際上透過扈從式分配進入在地菁英網絡，反而強化既有的恩庇結構。換句話說，若條件性的執行不夠嚴格，援助有可能成為依賴的潤滑劑而非變革的催化劑。</p>
 
   </section>
-
-  <div class="divider">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 14"><circle cx="8" cy="7" r="3" fill="#2c4a7c"/><circle cx="28" cy="7" r="3" fill="#1a1a1a"/><circle cx="48" cy="7" r="3" fill="#2c4a7c"/></svg>
-  </div>
 
   <section id="sec6">
     <h2><span class="num">Part 06</span>結語</h2>
@@ -1251,7 +1170,6 @@
       <li><span><i>Embassy of Sweden Sarajevo.</i> Strategy 2021–2027. <a href="https://www.swedenabroad.se/en/about-sweden-non-swedish-citizens/bosnia-and-herzegovina/development-and-aid/">swedenabroad.se</a></span></li>
       <li><span><i>World Bank (2024).</i> IDA welcomes new donors. <a href="https://blogs.worldbank.org/en/europeandcentralasia/road-crisis-recovery-ida-welcomes-armenia-bosnia-and-herzegovina-and-georgia">blogs.worldbank.org</a></span></li>
       <li><span><i>World Bank (2024).</i> CPF 2022–2026. <a href="https://www.worldbank.org/en/country/bosniaandherzegovina/brief/bosnia-and-herzegovina-and-the-world-bank-group-30-years-of-partnership">worldbank.org</a></span></li>
-      <li><span><i>EC (2025-12-04).</i> BiH Reform Agenda approved. <a href="https://enlargement.ec.europa.eu/news/commission-approves-bosnia-and-herzegovinas-reform-agenda-2025-12-04_en">enlargement.ec.europa.eu</a></span></li>
       <li><span><i>Chandler, D. (2006).</i> State-building in Bosnia. 引自 Embeddedness, Conformity, and Bad State-Building (Claremont, 2014). <a href="https://scholarship.claremont.edu/cgi/viewcontent.cgi?article=1068&context=urceu">claremont.edu</a></span></li>
       <li><span><i>IndexMundi / WB WDI.</i> BiH ODA % GNI / govt expense / capital formation. <a href="https://www.indexmundi.com/facts/bosnia-and-herzegovina/net-oda-received">indexmundi.com</a></span></li>
       <li><span><i>Viborc / WB (2023).</i> WB6 GDP per capita comparison. <a href="https://viborc.com/comparison-slovenia-croatia-western-balkans-gdp-ppp-hdi/">viborc.com</a></span></li>
